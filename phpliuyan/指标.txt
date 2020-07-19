@@ -1,0 +1,23 @@
+web服务器配置：
+Apache服务器：
+禁用目录浏览，应编辑http.conf文件，而且对每一个”Directory”指令，
+应清除”Indexs”或者禁止显示目录
+修改http.conf文件，清除默认的注释
+以nobody用户运行
+严格控制apache主目录的访问权限
+禁用apache server中的执行功能，修改access.conf文件：Options Includes Noexec
+禁止缺省访问
+对php的配置文件php.ini进行配置，禁用部分函数：
+disable_functions = phpinfo, get_cfg_var //禁止phpinfo和get_cfg_var等函数
+display_errors = Off //禁止爆出错误 
+safe_mode = On //开启安全模式，这个开了，可能会有些php功能没办法使用了 
+主机服务器配置：
+关闭235、445、3389端口
+启动防火墙
+关闭ICMP、
+增强日志容量
+数据库安全配置：
+修改MySQL端口修改配置文件my.ini
+高强度密码
+启动mysql日志
+删除历史命令历史
